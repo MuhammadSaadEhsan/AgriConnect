@@ -1,3 +1,4 @@
+import 'package:agriconnect/Views/Buyer/mainBuyer.dart';
 import 'package:agriconnect/Views/Order/cancelPayment.dart';
 import 'package:agriconnect/Views/Order/confirmPayment.dart';
 import 'package:agriconnect/Views/StartScreen/SplashScree.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: SplashScreen(),  // Your splash screen
+      // home: BuyerMain(),  // Your splash screen
       // home: OrderCancellationScreen(),  // Your splash screen
       debugShowCheckedModeBanner: false,
     );

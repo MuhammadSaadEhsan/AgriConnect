@@ -417,12 +417,12 @@ Stack(
                             radius: CustomSize().customWidth(context) / 10,
                             height: CustomSize().customHeight(context) / 15,
                             width: CustomSize().customWidth(context)/1.5 ,
-                            title: "Sumbit",
+                            title: "Submit",
                             
                             loading: false,
                             color: MyColors.primaryColor,
                             onTap: () {
-                          
+                               _submitCrop(context);
                             },
                           ),
                                ),

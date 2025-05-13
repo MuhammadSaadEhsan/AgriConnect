@@ -2230,7 +2230,7 @@ class _BuyerMainState extends State<BuyerMain> with TickerProviderStateMixin {
                                 color: MyColors.primaryColor, fontSize: 14)),
                         Text(username!,
                             style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.bold,color: MyColors.primaryColor,)),
+                                fontSize: 22, fontWeight: FontWeight.bold,color: MyColors.black,)),
                       ],
                     ),
                     if (imageUrl != null)
