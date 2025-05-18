@@ -73,7 +73,7 @@
 // //         // extendBodyBehindAppBar: true,
 // //         appBar: AppBar(
 // //           backgroundColor: Colors.transparent,
-// //           title: 
+// //           title:
 // //           Text('Transaction Details',style: TextStyle(fontWeight: FontWeight.w900,color: MyColors.primaryColor),)),
 // //         body: transactions.isEmpty
 // //             ? const Center(child: CircularProgressIndicator())
@@ -90,7 +90,7 @@
 // //                     var transaction = transactions[index];
 // //                     var receiverId = transaction['receiverId'];
 // //                     var receiver = receiverDetails[receiverId] ?? {};
-              
+
 // //                     return Card(
 // //                       color: Colors.white,
 // //                       margin: const EdgeInsets.all(10),
@@ -109,7 +109,7 @@
 // //                                     crossAxisAlignment: CrossAxisAlignment.start,
 // //                                     children: [
 // //                                       Text('Receiver: ${receiver['name']}',style:TextStyle(color: MyColors.primaryColor,
-                           
+
 // //                                               fontWeight: FontWeight.bold)),
 // //                                       Text('Phone: ${receiver['phone']}',style:TextStyle(color: MyColors.primaryColor)),
 // //                                       Text('Address: ${receiver['address']}',style:TextStyle(color: MyColors.primaryColor)),
@@ -127,7 +127,6 @@
 // //     );
 // //   }
 // // }
-
 
 // import 'dart:convert';
 // import 'package:agriconnect/Views/Buyer/mainBuyer.dart';
@@ -316,8 +315,6 @@
 //   }
 // }
 
-
-
 import 'dart:convert';
 import 'package:agriconnect/Views/Buyer/mainBuyer.dart';
 import 'package:agriconnect/constants/colors.dart';
@@ -360,7 +357,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
       setState(() {
         _isLoading = false;
       });
-       // Show error message to the user, maybe using a SnackBar
+      // Show error message to the user, maybe using a SnackBar
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('Failed to load transactions.'),
@@ -388,9 +385,10 @@ class _TransactionScreenState extends State<TransactionScreen> {
             };
           });
         } else {
-           print("Failed to load receiver details for ID $receiverId: ${response.statusCode}");
+          print(
+              "Failed to load receiver details for ID $receiverId: ${response.statusCode}");
           setState(() {
-             _isLoading = false;
+            _isLoading = false;
           });
           // Show error message to the user, maybe using a SnackBar
           ScaffoldMessenger.of(context).showSnackBar(
@@ -422,7 +420,8 @@ class _TransactionScreenState extends State<TransactionScreen> {
         appBar: AppBar(
           backgroundColor: MyColors.primaryColor,
           title: Text('Transaction Details',
-              style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+              style:
+                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
           leading: IconButton(
             icon: Icon(Icons.arrow_back, color: Colors.white),
             onPressed: () {
@@ -442,7 +441,9 @@ class _TransactionScreenState extends State<TransactionScreen> {
             ),
           ),
           child: _isLoading // Show loading indicator
-              ? Center(child: CircularProgressIndicator(color: MyColors.primaryColor))
+              ? Center(
+                  child:
+                      CircularProgressIndicator(color: MyColors.primaryColor))
               : transactions.isEmpty
                   ? Center(
                       child: Text("No transactions found.",
@@ -470,7 +471,7 @@ class _TransactionScreenState extends State<TransactionScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Transaction ID: ${transaction['transactionId']}',
+                                  'PayFast Transaction ID: ${transaction['payFastPaymentId']}',
                                   style: TextStyle(
                                       color: MyColors.primaryColor,
                                       fontWeight: FontWeight.bold,

@@ -397,11 +397,12 @@ class _ContactsScreenState extends State<ContactsScreen> {
                         leading: CircleAvatar(
                           backgroundColor: MyColors.primaryColor,
                           child: Text(
-                            contactName[0].toUpperCase(),
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
+  contactName.isNotEmpty ? contactName[0].toUpperCase() : '?',
+  style: TextStyle(
+    color: Colors.white,
+    fontWeight: FontWeight.bold,
+  ),
+),
                         ),
                         title: Text(
                           contactName,

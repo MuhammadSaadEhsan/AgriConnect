@@ -2102,6 +2102,7 @@ import 'package:agriconnect/Views/Buyer/history_order.dart';
 import 'package:agriconnect/Views/Common/profile_screen.dart';
 import 'package:agriconnect/Views/Order/detailed.dart';
 import 'package:agriconnect/Views/Order/shoppingCard.dart';
+import 'package:agriconnect/chatbot_screen.dart';
 import 'package:agriconnect/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -2511,6 +2512,18 @@ class _BuyerMainState extends State<BuyerMain> with TickerProviderStateMixin {
                     );
                   },
                 ),
+                 ListTile(
+              leading: Icon(Icons.smart_toy),
+              title: Text("ChatBot",style: GoogleFonts.inter(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: MyColors.black,
+                    ),),
+              onTap: () => Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => ChatBotScreen()),
+              ),
+            ),
                 ListTile(
                   leading: const Icon(Icons.history),
                   title: Text(
